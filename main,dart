@@ -1,0 +1,18 @@
+import 'dart:ui';
+// ... etc.
+
+class MyCustomScrollBehavior extends MaterialScrollBehavior {
+  // Override behavior methods and getters like dragDevices
+  @override
+  Set<PointerDeviceKind> get dragDevices => { 
+    PointerDeviceKind.touch,
+    PointerDeviceKind.mouse,
+    // ... etc.
+  };
+}
+
+// Set ScrollBehavior for an entire application.
+MaterialApp(
+  scrollBehavior: MyCustomScrollBehavior(),
+  // ... etc.
+);
